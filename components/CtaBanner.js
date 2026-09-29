@@ -9,10 +9,10 @@ export default function CtaBanner() {
           
           {/* Blueprint Grid Pattern Background */}
           <div 
-            className="absolute inset-0 pointer-events-none opacity-20"
+            className="absolute inset-0 pointer-events-none"
             style={{
-              backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px)`,
-              backgroundSize: '24px 24px'
+              backgroundImage: `linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)`,
+              backgroundSize: '60px 60px'
             }}
           />
 

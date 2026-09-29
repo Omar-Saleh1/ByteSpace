@@ -21,12 +21,12 @@ export default function CourseDetailPage() {
       {/* Top Blue Hero Banner */}
       <section className="bg-[#0052FF] text-white py-12 relative overflow-hidden">
         
-        {/* Grid Pattern Overlay */}
+        {/* Grid Lines Overlay */}
         <div 
-          className="absolute inset-0 pointer-events-none opacity-20"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px)`,
-            backgroundSize: '24px 24px'
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px'
           }}
         />
 
@@ -42,23 +42,23 @@ export default function CourseDetailPage() {
                 Unlock the Power of Digital Creation with Expert Guidance
               </p>
               <p className="text-xs text-blue-200 font-medium">
-                by <span className="font-bold text-white">purepearl studio</span>
+                by <span className="font-semibold text-[#C6FF00]">purepearl studio</span>
               </p>
 
               {/* Badges Row */}
               <div className="pt-3 flex flex-wrap items-center gap-3">
-                <span className="bg-white/10 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center space-x-1.5 border border-white/20">
-                  <BarChart2Icon className="w-3.5 h-3.5" />
+                <span className="bg-white text-slate-800 text-xs font-semibold px-4 py-1.5 rounded-full flex items-center space-x-2 shadow-sm">
+                  <BarChart2Icon className="w-3.5 h-3.5 text-[#0052FF]" />
                   <span>Intermediate</span>
                 </span>
 
-                <span className="bg-white/10 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center space-x-1.5 border border-white/20">
-                  <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                <span className="bg-white text-slate-800 text-xs font-semibold px-4 py-1.5 rounded-full flex items-center space-x-2 shadow-sm">
+                  <Star className="w-3.5 h-3.5 fill-[#0052FF] text-[#0052FF]" />
                   <span>4.8 (172 reviews)</span>
                 </span>
 
-                <span className="bg-white/10 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center space-x-1.5 border border-white/20">
-                  <Users className="w-3.5 h-3.5" />
+                <span className="bg-white text-slate-800 text-xs font-semibold px-4 py-1.5 rounded-full flex items-center space-x-2 shadow-sm">
+                  <Users className="w-3.5 h-3.5 text-[#0052FF]" />
                   <span>199 Students</span>
                 </span>
               </div>
