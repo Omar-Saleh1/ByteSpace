@@ -160,11 +160,11 @@ export default function Hero() {
             {/* Student Portrait Image */}
             <div className="relative w-[320px] h-[380px] sm:w-[450px] sm:h-[530px] lg:w-[520px] lg:h-[600px] -mt-16 z-20">
               <Image
-                src="/images/hero-student.png"
+                src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=1200"
                 alt="ByteSpace Student"
                 fill
                 priority
-                className="object-contain object-bottom"
+                className="object-cover object-top"
               />
             </div>
 

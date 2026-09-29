@@ -100,13 +100,13 @@ export default function ValuePropSection() {
           <div className="lg:col-span-7 relative flex justify-center order-2 lg:order-1">
             
             {/* Main portrait image — woman with headphones holding tablet */}
-            <div className="relative w-full max-w-lg h-[500px]">
+            <div className="relative w-full max-w-lg h-[480px]">
               <Image
-                src="/images/creator-female.png"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=900"
                 alt="Female creator with headset"
                 fill
                 priority
-                className="object-contain object-bottom"
+                className="object-cover object-top"
               />
             </div>
 
