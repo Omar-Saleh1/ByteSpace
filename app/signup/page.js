@@ -58,35 +58,35 @@ export default function SignupPage() {
           {/* Figma Graphic Stack Container */}
           <div className="relative w-full max-w-lg pt-6 pb-6">
             
-            {/* 3D Shapes */}
+            {/* 3D Shapes Matching Figma Proportions & Sizes */}
             
-            {/* 1. Lime 3D Torus Ring (Top Left of main card) */}
-            <div className="absolute top-0 left-10 z-30 pointer-events-none drop-shadow-xl animate-float-slow">
-              <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
-                <circle cx="36" cy="36" r="24" stroke="#C6FF00" strokeWidth="14" />
-                <circle cx="36" cy="36" r="24" stroke="#a0e000" strokeWidth="4" strokeDasharray="30 60" />
+            {/* 1. Lime 3D Torus Ring (Enlarged, Top Left overlapping main card corner) */}
+            <div className="absolute -top-6 left-2 z-30 pointer-events-none drop-shadow-2xl animate-float-slow transform -rotate-12">
+              <svg width="115" height="115" viewBox="0 0 115 115" fill="none">
+                <ellipse cx="57" cy="57" rx="42" ry="30" stroke="#C6FF00" strokeWidth="22" transform="rotate(-20 57 57)" />
+                <ellipse cx="57" cy="57" rx="42" ry="30" stroke="#a4e000" strokeWidth="4" strokeDasharray="40 60" transform="rotate(-20 57 57)" />
               </svg>
             </div>
 
-            {/* 2. Lime 3D Cone / Pyramid (Bottom Left) */}
-            <div className="absolute -bottom-6 -left-4 z-30 pointer-events-none drop-shadow-2xl animate-float-reverse">
-              <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
-                {/* 3D Pyramid Facets */}
-                <polygon points="45,10 10,75 45,85" fill="#C6FF00" />
-                <polygon points="45,10 45,85 80,75" fill="#aee600" />
-                <polygon points="45,10 10,75 80,75" fill="#9bd100" opacity="0.4" />
+            {/* 2. Lime 3D Cone / Pyramid (Enlarged, Bottom Left overlapping back card) */}
+            <div className="absolute -bottom-12 -left-12 z-30 pointer-events-none drop-shadow-2xl animate-float-reverse">
+              <svg width="140" height="160" viewBox="0 0 140 160" fill="none">
+                <polygon points="70,10 10,140 70,152" fill="#D2FF1A" />
+                <polygon points="70,10 70,152 130,130" fill="#B3EB00" />
+                <polygon points="70,10 10,140 130,130" fill="#9cd400" opacity="0.25" />
               </svg>
             </div>
 
-            {/* 3. White 3D Zig-Zag Ribbon / Spring (Right Side) */}
-            <div className="absolute top-28 -right-4 z-30 pointer-events-none drop-shadow-2xl hidden sm:block">
-              <svg width="70" height="110" viewBox="0 0 70 110" fill="none">
+            {/* 3. White 3D Scribble / Zigzag Ribbon (Enlarged, Right Side overlapping front & happy cards) */}
+            <div className="absolute bottom-6 -right-8 z-30 pointer-events-none drop-shadow-2xl hidden sm:block">
+              <svg width="125" height="150" viewBox="0 0 125 150" fill="none">
                 <path 
-                  d="M10 15 C 40 5, 60 25, 35 45 C 10 65, 60 75, 45 100" 
+                  d="M20 20 L 100 45 L 30 90 L 105 125" 
                   stroke="white" 
-                  strokeWidth="16" 
-                  strokeLinecap="round"
-                  filter="drop-shadow(0px 8px 12px rgba(0,0,0,0.15))"
+                  strokeWidth="24" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  filter="drop-shadow(0px 12px 18px rgba(0,0,0,0.2))"
                 />
               </svg>
             </div>
