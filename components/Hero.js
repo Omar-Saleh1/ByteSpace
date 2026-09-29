@@ -198,8 +198,8 @@ export default function Hero() {
               <p className="text-[10px] text-slate-400 font-medium mt-0.5">200 Courses • 1000+ Students</p>
             </div>
 
-            {/* Badge 2 (Right): Learning Progress 55% */}
-            <div className="absolute top-28 -right-6 sm:-right-16 bg-white text-slate-900 p-4 rounded-2xl shadow-2xl border border-slate-100 z-30 min-w-[170px]">
+            {/* Badge 2 (Right): Learning Progress 55% - Aligned on exact same top-20 baseline */}
+            <div className="absolute top-20 -right-6 sm:-right-16 bg-white text-slate-900 p-4 rounded-2xl shadow-2xl border border-slate-100 z-30 min-w-[170px]">
               <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Learning Progress</p>
               <p className="text-3xl font-black text-slate-900 mt-0.5">55%</p>
               <div className="w-full bg-slate-100 rounded-full h-2 mt-2 overflow-hidden">
@@ -208,11 +208,11 @@ export default function Hero() {
             </div>
 
             {/* Badge 3 (Bottom-Left): Happy Students */}
-            <div className="absolute bottom-16 -left-8 sm:-left-20 bg-white text-slate-900 p-4 rounded-2xl shadow-2xl border border-slate-100 z-30 min-w-[180px]">
+            <div className="absolute bottom-10 -left-8 sm:-left-20 bg-white text-slate-900 p-4 rounded-2xl shadow-2xl border border-slate-100 z-30 min-w-[180px]">
               <p className="text-xs font-bold text-slate-900">Happy Students</p>
               <div className="flex items-center space-x-1 text-[11px] font-bold text-slate-700 mt-0.5">
                 <span>4.5 (240)</span>
-                <Star className="w-3.5 h-3.5 fill-[#C6FF00] text-[#C6FF00]" />
+                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
               </div>
               <div className="flex items-center space-x-[-6px] mt-2.5">
                 <img className="w-6 h-6 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="user" />
