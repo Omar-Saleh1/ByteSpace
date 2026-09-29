@@ -41,7 +41,7 @@ export default function LoginPage() {
       {/* Main Grid Content */}
       <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center my-auto py-8">
         
-        {/* Left Side: Headline & Card Visual Stack */}
+        {/* Left Side: Headline & Exact Figma Graphic Stack */}
         <div className="lg:col-span-6 space-y-8">
           
           {/* Text Section */}
@@ -54,73 +54,147 @@ export default function LoginPage() {
             </p>
           </div>
 
-          {/* Graphic Stack Container */}
-          <div className="relative w-full max-w-md pt-4">
+          {/* Figma Graphic Stack Container */}
+          <div className="relative w-full max-w-lg pt-6 pb-6">
             
             {/* 3D Shapes */}
-            <div className="absolute -top-6 left-12 z-30 pointer-events-none animate-float-slow">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                <circle cx="32" cy="32" r="22" stroke="#C6FF00" strokeWidth="12" />
+            <div className="absolute top-0 left-10 z-30 pointer-events-none drop-shadow-xl animate-float-slow">
+              <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+                <circle cx="36" cy="36" r="24" stroke="#C6FF00" strokeWidth="14" />
+                <circle cx="36" cy="36" r="24" stroke="#a0e000" strokeWidth="4" strokeDasharray="30 60" />
               </svg>
             </div>
 
-            <div className="absolute -bottom-10 -left-6 z-30 pointer-events-none animate-float-reverse">
-              <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
-                <polygon points="10,60 35,10 60,60" fill="#C6FF00" />
+            <div className="absolute -bottom-6 -left-4 z-30 pointer-events-none drop-shadow-2xl animate-float-reverse">
+              <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+                <polygon points="45,10 10,75 45,85" fill="#C6FF00" />
+                <polygon points="45,10 45,85 80,75" fill="#aee600" />
+                <polygon points="45,10 10,75 80,75" fill="#9bd100" opacity="0.4" />
               </svg>
             </div>
 
-            {/* Back Card */}
-            <div className="bg-white rounded-3xl p-4 shadow-xl border border-slate-100 max-w-[280px] -rotate-6 transform transition-all duration-500 opacity-90">
-              <div className="relative h-24 rounded-2xl overflow-hidden bg-slate-100 mb-3">
+            <div className="absolute top-28 -right-4 z-30 pointer-events-none drop-shadow-2xl hidden sm:block">
+              <svg width="70" height="110" viewBox="0 0 70 110" fill="none">
+                <path 
+                  d="M10 15 C 40 5, 60 25, 35 45 C 10 65, 60 75, 45 100" 
+                  stroke="white" 
+                  strokeWidth="16" 
+                  strokeLinecap="round"
+                  filter="drop-shadow(0px 8px 12px rgba(0,0,0,0.15))"
+                />
+              </svg>
+            </div>
+
+            {/* CARD 1: BACK CARD */}
+            <div className="bg-white rounded-3xl p-5 shadow-xl border border-slate-100 max-w-[320px] relative z-10 transform -rotate-3 transition-all duration-500">
+              <div className="relative h-32 rounded-2xl overflow-hidden bg-slate-100 mb-3">
                 <Image 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400" 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500" 
                   alt="Build Digital Asset" 
                   fill 
                   className="object-cover"
                 />
-                <span className="absolute bottom-2 left-2 bg-white/90 text-[9px] font-bold text-slate-700 px-2 py-0.5 rounded-full">
+                <span className="absolute bottom-2.5 left-2.5 bg-slate-200/90 text-[10px] font-semibold text-slate-700 px-3 py-1 rounded-full backdrop-blur-sm">
                   17 Lessons
                 </span>
               </div>
-              <h4 className="text-xs font-bold text-slate-900">Build Digital Asset</h4>
-              <p className="text-[10px] text-slate-400">by purepearl studio</p>
+              
+              <h4 className="text-base font-bold text-slate-900">Build Digital Asset</h4>
+              <p className="text-xs text-slate-400 mt-0.5">
+                by <span className="text-[#0052FF] font-semibold">purepearl studio</span>
+              </p>
+
+              <div className="flex items-center space-x-2 mt-3">
+                <span className="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full flex items-center space-x-1">
+                  <BarChartIcon className="w-3 h-3 text-slate-500" />
+                  <span>Beginner</span>
+                </span>
+                
+                <div className="flex items-center space-x-[-6px]">
+                  <img className="w-5 h-5 rounded-full border border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="user" />
+                  <img className="w-5 h-5 rounded-full border border-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="user" />
+                  <img className="w-5 h-5 rounded-full border border-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="user" />
+                  <span className="w-5 h-5 rounded-full bg-slate-900 text-white font-extrabold text-[9px] flex items-center justify-center border border-white">26+</span>
+                </div>
+              </div>
+
+              <div className="mt-3 pt-2 flex items-center">
+                <span className="text-sm font-black text-[#0052FF]">$25</span>
+                <span className="text-xs text-slate-400 font-medium ml-1">/lifetime</span>
+              </div>
             </div>
 
-            {/* Front Card */}
-            <div className="bg-white rounded-3xl p-5 shadow-2xl border border-slate-100 max-w-[340px] relative z-20 -mt-16 ml-8 rotate-2 hover:rotate-0 transition-transform duration-300">
-              <div className="relative h-36 rounded-2xl overflow-hidden bg-slate-900 mb-3">
+            {/* CARD 2: FRONT CARD */}
+            <div className="bg-white rounded-3xl p-5 sm:p-6 shadow-2xl border border-slate-100 max-w-[380px] relative z-20 -mt-28 ml-10 transform rotate-2 hover:rotate-0 transition-transform duration-300">
+              
+              <div className="relative h-44 rounded-2xl overflow-hidden bg-slate-900 mb-4">
                 <Image 
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" 
                   alt="the Power of Big Data" 
                   fill 
                   className="object-cover"
                 />
-                <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[9px] font-semibold text-slate-700 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full">
-                  <span>17 Lessons</span>
-                  <span>•</span>
-                  <span>2 hours 16 mins</span>
+                <div className="absolute bottom-2.5 left-2 right-2 flex items-center justify-center space-x-1.5 text-[10px] font-semibold text-slate-700">
+                  <span className="bg-slate-200/80 backdrop-blur-md px-2.5 py-1 rounded-full">17 Lessons</span>
+                  <span className="bg-slate-200/80 backdrop-blur-md px-2.5 py-1 rounded-full">2 hours 16 mins</span>
+                  <span className="bg-slate-200/80 backdrop-blur-md px-2.5 py-1 rounded-full">59 Comments</span>
                 </div>
               </div>
 
               <div className="flex items-start justify-between">
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900">the Power of Big Data</h4>
-                  <p className="text-[11px] text-slate-400">by purepearl studio</p>
+                  <h4 className="text-lg font-extrabold text-slate-900 leading-snug">the Power of Big Data</h4>
+                  <p className="text-xs text-slate-400 mt-0.5">
+                    by <span className="text-[#0052FF] font-semibold">purepearl studio</span>
+                  </p>
                 </div>
-                <div className="flex items-center space-x-1 text-xs font-bold text-slate-800">
+                <div className="flex items-center space-x-1 text-sm font-extrabold text-slate-800">
                   <span>4.5</span>
-                  <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+                  <Star className="w-4 h-4 fill-[#C6FF00] text-[#C6FF00]" />
                 </div>
               </div>
+
+              <div className="flex items-center justify-between mt-4">
+                <span className="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1.5 rounded-full flex items-center space-x-1">
+                  <BarChartIcon className="w-3.5 h-3.5 text-slate-500" />
+                  <span>Beginner</span>
+                </span>
+
+                <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-[-6px]">
+                    <img className="w-6 h-6 rounded-full border border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="user" />
+                    <img className="w-6 h-6 rounded-full border border-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="user" />
+                    <img className="w-6 h-6 rounded-full border border-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="user" />
+                    <span className="w-6 h-6 rounded-full bg-slate-900 text-white font-extrabold text-[9px] flex items-center justify-center border border-white">26+</span>
+                  </div>
+
+                  <div className="relative w-9 h-9 rounded-full border-2 border-white shadow-xl overflow-hidden flex-shrink-0 animate-bounce">
+                    <Image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="pin" fill className="object-cover" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-4 pt-2 border-t border-slate-100 flex items-center">
+                <span className="text-base font-black text-[#0052FF]">$25</span>
+                <span className="text-xs text-slate-400 font-medium ml-1">/lifetime</span>
+              </div>
+
             </div>
 
-            {/* Bottom Lime Card */}
-            <div className="bg-[#C6FF00] text-slate-900 rounded-2xl p-4 shadow-xl max-w-[240px] relative z-30 -mt-10 ml-28 rotate-[-3deg]">
-              <h5 className="text-xs font-extrabold">Happy Students</h5>
-              <div className="flex items-center space-x-1 text-[11px] font-bold mt-0.5">
+            {/* CARD 3: BOTTOM LIME CARD */}
+            <div className="bg-[#C6FF00] text-slate-900 rounded-2xl p-4 shadow-xl max-w-[260px] relative z-30 -mt-12 ml-36 transform -rotate-2">
+              <h5 className="text-xs font-black">Happy Students</h5>
+              <div className="flex items-center space-x-1 text-xs font-extrabold mt-0.5">
                 <span>4.5 (240)</span>
-                <Star className="w-3 h-3 fill-slate-900 text-slate-900" />
+                <Star className="w-3.5 h-3.5 fill-[#0052FF] text-[#0052FF]" />
+              </div>
+              <div className="flex items-center space-x-[-6px] mt-2.5">
+                <img className="w-6 h-6 rounded-full border border-slate-900 object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="user" />
+                <img className="w-6 h-6 rounded-full border border-slate-900 object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="user" />
+                <img className="w-6 h-6 rounded-full border border-slate-900 object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="user" />
+                <img className="w-6 h-6 rounded-full border border-slate-900 object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" alt="user" />
+                <img className="w-6 h-6 rounded-full border border-slate-900 object-cover" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" alt="user" />
+                <span className="w-6 h-6 rounded-full bg-slate-900 text-white font-extrabold text-[9px] flex items-center justify-center">2K+</span>
               </div>
             </div>
 
@@ -200,5 +274,15 @@ export default function LoginPage() {
       </footer>
 
     </main>
+  );
+}
+
+function BarChartIcon(props) {
+  return (
+    <svg {...props} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="18" y1="20" x2="18" y2="10" />
+      <line x1="12" y1="20" x2="12" y2="4" />
+      <line x1="6" y1="20" x2="6" y2="14" />
+    </svg>
   );
 }
