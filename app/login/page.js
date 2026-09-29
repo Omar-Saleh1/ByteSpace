@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Sparkles, Star } from "lucide-react";
+import ByteSpaceLogo from "@/components/ByteSpaceLogo";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -28,13 +29,8 @@ export default function LoginPage() {
 
       {/* Top Header: ByteSpace Logo */}
       <header className="relative z-10">
-        <Link href="/" className="inline-flex items-center space-x-2 group">
-          <div className="w-9 h-9 rounded-xl bg-[#C6FF00] flex items-center justify-center text-slate-900 shadow-md">
-            <Sparkles className="w-5 h-5 fill-slate-900" />
-          </div>
-          <span className="text-2xl font-black tracking-tight text-white">
-            Byte<span className="text-white">Space</span>
-          </span>
+        <Link href="/">
+          <ByteSpaceLogo />
         </Link>
       </header>
 

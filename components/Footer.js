@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Sparkles, Send, Twitter, Github, Linkedin, Disc as Discord, CheckCircle } from "lucide-react";
+import ByteSpaceLogo from "@/components/ByteSpaceLogo";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -26,13 +27,8 @@ export default function Footer() {
           
           {/* Brand Logo & Tagline */}
           <div className="lg:col-span-5 space-y-3">
-            <Link href="/" className="inline-flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-xl bg-brand-lime flex items-center justify-center text-brand-dark font-black text-xl shadow-lg">
-                <Sparkles className="w-5 h-5 fill-brand-dark" />
-              </div>
-              <span className="text-2xl font-extrabold tracking-tight text-white">
-                Byte<span className="text-brand-lime">Space</span>
-              </span>
+            <Link href="/" className="inline-flex items-center">
+              <ByteSpaceLogo />
             </Link>
             <p className="text-slate-400 text-sm max-w-sm">
               Empowering future tech leaders with world-class curriculum, hands-on projects, and 1-on-1 expert mentorship.
