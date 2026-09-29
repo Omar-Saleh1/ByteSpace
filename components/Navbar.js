@@ -27,10 +27,10 @@ export default function Navbar() {
             <Link href="/" className="hover:text-[#C6FF00] transition-colors">
               Home
             </Link>
-            <Link href="#courses" className="hover:text-[#C6FF00] transition-colors">
+            <Link href="/courses" className="hover:text-[#C6FF00] transition-colors">
               Courses
             </Link>
-            <Link href="#creators" className="hover:text-[#C6FF00] transition-colors">
+            <Link href="/creators" className="hover:text-[#C6FF00] transition-colors">
               Creators
             </Link>
           </nav>
