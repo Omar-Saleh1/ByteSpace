@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import CourseCard from "./CourseCard";
+import { SlidersHorizontal, BarChart2, Grid, ArrowUpDown } from "lucide-react";
 
 const sampleCourses = [
   {
@@ -22,7 +23,7 @@ const sampleCourses = [
     title: "Build Digital Asset",
     category: "Featured",
     price: "$25",
-    rating: "4.6",
+    rating: "4.5",
     lessons: "17 Lessons",
     duration: "2 hours 16 mins",
     comments: "60 Comments",
@@ -93,25 +94,15 @@ const categoryPills = [
   "Social Media",
   "UI/UX Design",
   "Creative Marketing",
-  "Digital Illustration",
-  "Film & Video",
-  "Crafts",
-  "Freelance & Entrepreneurship",
-  "Graphic Design",
-  "Photography",
-  "Productivity",
-  "Web Development",
-  "Data Science",
   "Cooking",
-  "+ More",
 ];
 
 export default function CoursesSection() {
   const [activeTab, setActiveTab] = useState("Featured");
 
   return (
-    <section id="courses" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="courses" className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -123,15 +114,46 @@ export default function CoursesSection() {
           </p>
         </div>
 
-        {/* 18 Category Pills Grid */}
-        <div className="mt-10 max-w-4xl mx-auto flex items-center justify-center flex-wrap gap-2">
+        {/* Toolbar Row: Filter Buttons Left, Sort Right */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4">
+          
+          {/* Left Filter Buttons */}
+          <div className="flex items-center space-x-3 flex-wrap gap-y-2">
+            <button className="bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-semibold text-xs px-4 py-2 rounded-full flex items-center space-x-2 shadow-sm">
+              <SlidersHorizontal className="w-3.5 h-3.5 text-slate-500" />
+              <span>Filter</span>
+            </button>
+
+            <button className="bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-semibold text-xs px-4 py-2 rounded-full flex items-center space-x-2 shadow-sm">
+              <BarChart2 className="w-3.5 h-3.5 text-slate-500" />
+              <span>Level</span>
+            </button>
+
+            <button className="bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-semibold text-xs px-4 py-2 rounded-full flex items-center space-x-2 shadow-sm">
+              <Grid className="w-3.5 h-3.5 text-slate-500" />
+              <span>Category</span>
+            </button>
+          </div>
+
+          {/* Right Sort Button */}
+          <div>
+            <button className="bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-semibold text-xs px-4 py-2 rounded-full flex items-center space-x-2 shadow-sm">
+              <ArrowUpDown className="w-3.5 h-3.5 text-slate-500" />
+              <span>Most relevant</span>
+            </button>
+          </div>
+
+        </div>
+
+        {/* Category Pills Row */}
+        <div className="flex items-center flex-wrap gap-2">
           {categoryPills.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveTab(cat)}
               className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 ${
                 activeTab === cat
-                  ? "bg-[#C6FF00] text-slate-900 font-extrabold shadow-md scale-105"
+                  ? "bg-[#C6FF00] text-slate-900 font-extrabold shadow-sm scale-105"
                   : "bg-slate-100 text-slate-600 hover:bg-slate-200"
               }`}
             >
@@ -141,7 +163,7 @@ export default function CoursesSection() {
         </div>
 
         {/* Course Grid */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
           {sampleCourses.map((course) => (
             <CourseCard key={course.id} course={course} />
           ))}
