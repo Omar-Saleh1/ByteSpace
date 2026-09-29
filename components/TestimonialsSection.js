@@ -26,26 +26,16 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-24 relative overflow-hidden bg-[#FAFCFF] font-sans">
-      
-      {/* Background Gradient Mesh matching Figma screenshot */}
-      {/* Top Right Lime-Yellow Radial Glow */}
-      <div 
-        className="absolute top-0 right-0 w-[700px] h-[700px] pointer-events-none"
-        style={{
-          background: "radial-gradient(circle at 85% 15%, rgba(215, 255, 60, 0.55) 0%, rgba(215, 255, 60, 0.2) 45%, transparent 70%)",
-          filter: "blur(40px)"
-        }}
-      />
-
-      {/* Bottom Left Vibrant Purple / Lavender Radial Glow */}
-      <div 
-        className="absolute -bottom-20 -left-20 w-[650px] h-[650px] pointer-events-none"
-        style={{
-          background: "radial-gradient(circle at 20% 80%, rgba(165, 175, 255, 0.85) 0%, rgba(185, 195, 255, 0.45) 40%, transparent 70%)",
-          filter: "blur(35px)"
-        }}
-      />
+    <section
+      className="py-24 relative overflow-hidden font-sans"
+      style={{
+        background: `
+          radial-gradient(ellipse at 100% 0%, rgba(190, 255, 60, 0.55) 0%, transparent 55%),
+          radial-gradient(ellipse at 0% 100%, rgba(170, 185, 255, 0.70) 0%, transparent 55%),
+          #ffffff
+        `
+      }}
+    >
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
         
