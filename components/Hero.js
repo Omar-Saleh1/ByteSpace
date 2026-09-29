@@ -16,7 +16,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-[#0052FF] text-white relative overflow-hidden pt-12 pb-0 font-sans">
+    <section className="bg-[#0052FF] text-white relative overflow-hidden pt-28 sm:pt-32 pb-0 font-sans">
       
       {/* White Square Grid Pattern Overlay */}
       <div 
