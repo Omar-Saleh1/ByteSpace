@@ -402,16 +402,16 @@ export default function CourseDetailPage() {
             {/* Reviews Cards List */}
             <div className="space-y-4">
               {[
-                { name: "PurePearl Studio", role: "UI/UX Designer", time: "a year ago", quote: "The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!" },
-                { name: "Albert Flores", role: "UI/UX Designer", time: "a year ago", quote: "This course transformed my approach to digital design. The combination of theory, hands-on exercises, and real-world applications made it a truly enriching experience. Excited to implement what I've learned!" },
-                { name: "Cody Fisher", role: "UI/UX Designer", time: "a year ago", quote: "The project showcase and critique module created a collaborative environment where I could showcase my work, receive valuable feedback, and refine my skills. It added a unique and valuable dimension to the learning process." },
-                { name: "Brooklyn Simmons", role: "UI/UX Designer", time: "a year ago", quote: "The lessons on optimizing digital assets for various platforms were particularly insightful. The course adapts to the evolving digital landscape, and the engaging content kept me motivated throughout." },
+                { name: "PurePearl Studio", role: "UI/UX Designer", time: "a year ago", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face", quote: "The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!" },
+                { name: "Albert Flores", role: "UI/UX Designer", time: "a year ago", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face", quote: "This course transformed my approach to digital design. The combination of theory, hands-on exercises, and real-world applications made it a truly enriching experience. Excited to implement what I've learned!" },
+                { name: "Cody Fisher", role: "UI/UX Designer", time: "a year ago", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face", quote: "The project showcase and critique module created a collaborative environment where I could showcase my work, receive valuable feedback, and refine my skills. It added a unique and valuable dimension to the learning process." },
+                { name: "Brooklyn Simmons", role: "UI/UX Designer", time: "a year ago", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face", quote: "The lessons on optimizing digital assets for various platforms were particularly insightful. The course adapts to the evolving digital landscape, and the engaging content kept me motivated throughout." },
               ].map((rev, idx) => (
                 <div key={idx} className="bg-white border border-slate-200/80 rounded-2xl p-5 space-y-3 shadow-sm">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
                       <div className="relative w-8 h-8 rounded-full overflow-hidden border border-slate-200">
-                        <Image src={`https://images.unsplash.com/photo-${1500000000000 + idx * 100000}?w=100`} alt="user" fill className="object-cover" />
+                        <Image src={rev.avatar} alt={rev.name} fill className="object-cover" />
                       </div>
                       <div>
                         <h5 className="text-xs font-bold text-slate-900">{rev.name}</h5>
