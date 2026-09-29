@@ -16,9 +16,9 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-[#0052FF] text-white relative overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-24">
+    <section className="bg-[#0052FF] text-white relative overflow-hidden pt-12 pb-0 font-sans">
       
-      {/* Blueprint Grid Pattern Background Overlay */}
+      {/* White Square Grid Pattern Overlay */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -27,121 +27,208 @@ export default function Hero() {
         }}
       />
 
-      {/* Floating 3D Vector Decorations matching Figma */}
-      <div className="absolute top-10 left-6 sm:left-12 animate-float-slow pointer-events-none">
-        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" className="text-[#C6FF00]">
-          <path d="M10 10L25 25L10 40L25 55" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M30 10L45 25L30 40L45 55" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
+
+      {/* ===================== LEFT SIDE 3D ELEMENTS & WIREFRAME BOXES ===================== */}
+
+      {/* 1. Far Top-Left Lime 3D Spring Coil */}
+      <div className="absolute top-24 -left-10 z-10 pointer-events-none drop-shadow-2xl">
+        <svg width="150" height="170" viewBox="0 0 150 170" fill="none">
+          <path
+            d="M15 25 C 85 -15, 140 35, 45 85 C -35 130, 125 155, 95 155"
+            stroke="#C6FF00"
+            strokeWidth="30"
+            strokeLinecap="round"
+          />
         </svg>
       </div>
 
-      <div className="absolute bottom-20 left-10 animate-float-reverse pointer-events-none hidden md:block">
-        <div className="w-16 h-16 rounded-full border-8 border-white/50 border-t-white shadow-2xl"></div>
+      {/* 2. Middle-Left Wireframe Box + White 3D Zigzag Spring */}
+      <div className="absolute top-80 left-12 w-44 h-44 border border-white/20 rounded-none pointer-events-none hidden lg:block z-10">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <svg width="100" height="120" viewBox="0 0 100 120" fill="none">
+            <path
+              d="M15 15 L 85 35 L 20 75 L 90 100"
+              stroke="white"
+              strokeWidth="20"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              filter="drop-shadow(0px 8px 12px rgba(0,0,0,0.15))"
+            />
+          </svg>
+        </div>
       </div>
 
-      <div className="absolute top-12 right-10 animate-float-reverse pointer-events-none">
-        <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
-          <polygon points="35,5 65,60 5,60" fill="#C6FF00" />
+      {/* 3. Bottom-Left Wireframe Box + Large White 3D Torus Ring */}
+      <div className="absolute -bottom-10 -left-6 w-72 h-72 border border-white/20 rounded-none pointer-events-none hidden md:block z-10">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <svg width="220" height="220" viewBox="0 0 220 220" fill="none">
+            <ellipse cx="110" cy="110" rx="90" ry="65" stroke="white" strokeWidth="40" transform="rotate(-25 110 110)" />
+            <ellipse cx="110" cy="110" rx="90" ry="65" stroke="#e2e8f0" strokeWidth="6" strokeDasharray="60 90" transform="rotate(-25 110 110)" />
+          </svg>
+        </div>
+      </div>
+
+
+
+      {/* ===================== RIGHT SIDE 3D ELEMENTS & WIREFRAME BOXES ===================== */}
+
+      {/* 1. Top-Right Lime 3D Slanted Cylinder / Capsule */}
+      <div className="absolute top-16 -right-10 z-10 pointer-events-none drop-shadow-2xl hidden md:block">
+        <svg width="180" height="240" viewBox="0 0 180 240" fill="none" transform="rotate(-15)">
+          <rect x="35" y="45" width="115" height="165" rx="55" fill="#C6FF00" />
+          <ellipse cx="92" cy="45" rx="55" ry="28" fill="#D8FF4D" />
         </svg>
       </div>
 
-      <div className="absolute bottom-16 right-12 animate-float-slow pointer-events-none hidden md:block">
-        <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-          <path d="M25 0L31 19L50 25L31 31L25 50L19 31L0 25L19 19L25 0Z" fill="white" opacity="0.9"/>
-        </svg>
+      {/* 2. Middle-Right Wireframe Box + White 3D Cone/Pyramid + Cursor "Anonymous" */}
+      <div className="absolute top-64 right-16 w-52 h-52 border border-white/20 rounded-none pointer-events-none hidden lg:block z-10">
+        {/* White 3D Pyramid inside */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <svg width="130" height="140" viewBox="0 0 130 140" fill="none">
+            <polygon points="65,10 10,125 120,125" fill="white" />
+            <polygon points="65,10 120,125 65,125" fill="#e2e8f0" />
+          </svg>
+        </div>
+
+        {/* Cursor + "Anonymous" Badge */}
+        <div className="absolute -top-6 -left-12 flex items-center space-x-1.5 z-20 pointer-events-none">
+          {/* White Cursor Arrow */}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 4L11 20L14 13L21 10L4 4Z" fill="white" stroke="#1E293B" strokeWidth="1.5" strokeLinejoin="round"/>
+          </svg>
+          {/* Dark Glass Badge */}
+          <span className="bg-slate-900/80 backdrop-blur-md text-white font-bold text-xs px-3.5 py-1.5 rounded-xl border border-slate-700/60 shadow-xl">
+            Anonymous
+          </span>
+        </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto space-y-5">
+      {/* 3. Bottom-Right Wireframe Box + White 3D Spring + Cursor "Aminul Islam" */}
+      <div className="absolute bottom-4 right-8 w-64 h-64 border border-white/20 rounded-none pointer-events-none hidden md:block z-10">
+        {/* White 3D Spring inside */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <svg width="150" height="170" viewBox="0 0 150 170" fill="none">
+            <path
+              d="M20 20 L 125 50 L 35 100 L 130 140"
+              stroke="white"
+              strokeWidth="28"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              filter="drop-shadow(0px 12px 18px rgba(0,0,0,0.2))"
+            />
+          </svg>
+        </div>
+
+        {/* Purple Cursor + "Aminul Islam" Badge */}
+        <div className="absolute -bottom-4 -left-12 flex items-center space-x-1.5 z-20 pointer-events-none">
+          {/* Purple Cursor Arrow */}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 4L11 20L14 13L21 10L4 4Z" fill="#A855F7" stroke="white" strokeWidth="1.5" strokeLinejoin="round"/>
+          </svg>
+          {/* Purple Badge */}
+          <span className="bg-[#9333EA] text-white font-black text-xs px-3.5 py-1.5 rounded-xl shadow-2xl border border-purple-400/40">
+            Aminul Islam
+          </span>
+        </div>
+      </div>
+
+
+
+      {/* ===================== MAIN CENTER CONTENT & HEADLINE ===================== */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+        
+        <div className="text-center max-w-4xl mx-auto space-y-4">
           
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight sm:leading-none">
-            Get Access to Hundreds <br className="hidden sm:inline" />
-            Courses Available
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.08] text-white">
+            Get Access to Hundreds <br /> Courses Available
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg text-blue-100 font-normal max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-base text-blue-100 font-normal max-w-xl mx-auto leading-relaxed pt-1">
             Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
           </p>
 
           {/* Search Bar */}
-          <form onSubmit={handleSearch} className="pt-2 max-w-lg mx-auto">
-            <div className="bg-white rounded-full p-2 pl-5 shadow-2xl flex items-center justify-between">
+          <form onSubmit={handleSearch} className="pt-3 max-w-lg mx-auto">
+            <div className="bg-white rounded-full p-2 pl-6 pr-2 shadow-2xl flex items-center justify-between">
               <div className="flex items-center space-x-3 flex-1">
-                <Search className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                <Search className="w-4 h-4 text-slate-400 flex-shrink-0" />
                 <input
                   type="text"
                   placeholder="Course, topic, creator"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full text-slate-800 text-sm font-medium placeholder-slate-400 bg-transparent focus:outline-none"
+                  className="w-full text-slate-800 text-xs sm:text-sm font-medium placeholder-slate-400 bg-transparent focus:outline-none"
                 />
               </div>
               <button
                 type="submit"
-                className="bg-[#C6FF00] hover:bg-[#b8f000] text-slate-900 font-bold text-sm px-6 py-2.5 rounded-full transition-all flex-shrink-0 shadow-md"
+                className="bg-[#C6FF00] hover:bg-[#b8f000] text-slate-900 font-extrabold text-xs px-7 py-3 rounded-full transition-all flex-shrink-0 shadow-md hover:scale-105"
               >
                 Search
               </button>
             </div>
           </form>
+
         </div>
 
-        {/* Hero Visual Area with Lime Circle Backdrop */}
-        <div className="mt-14 relative max-w-2xl mx-auto">
+
+
+        {/* ===================== HERO VISUAL: LIME CIRCLE + STUDENT + 3 BADGES ===================== */}
+        <div className="mt-8 relative max-w-3xl mx-auto flex justify-center">
           
-          <div className="w-72 h-72 sm:w-96 sm:h-96 bg-[#C6FF00] rounded-full mx-auto relative flex items-center justify-center shadow-2xl">
+          {/* Giant Lime Circle Backdrop */}
+          <div className="relative w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] lg:w-[560px] lg:h-[560px] bg-[#C6FF00] rounded-full flex items-end justify-center shadow-2xl overflow-visible">
             
             {/* Student Portrait Image */}
-            <div className="relative w-64 h-80 sm:w-80 sm:h-96 overflow-hidden rounded-b-full -mt-10">
+            <div className="relative w-[320px] h-[380px] sm:w-[450px] sm:h-[530px] lg:w-[520px] lg:h-[600px] -mt-16 z-20">
               <Image
-                src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=1200"
                 alt="ByteSpace Student"
                 fill
                 priority
-                className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                className="object-cover object-top"
               />
             </div>
 
-            {/* Top Left Floating Badge: UI/UX Design */}
-            <div className="absolute top-4 -left-4 sm:-left-12 bg-white text-slate-800 px-4 py-2.5 rounded-2xl shadow-xl border border-slate-100 animate-float-slow hidden sm:block">
+            {/* Badge 1 (Left): UI/UX Design */}
+            <div className="absolute top-20 -left-6 sm:-left-16 bg-white text-slate-900 px-4 py-3 rounded-2xl shadow-2xl border border-slate-100 z-30 min-w-[150px]">
               <p className="text-xs font-bold text-slate-900">UI/UX Design</p>
-              <p className="text-[10px] text-slate-500 font-medium">200 Courses • 1000+ Students</p>
+              <p className="text-[10px] text-slate-400 font-medium mt-0.5">200 Courses • 1000+ Students</p>
             </div>
 
-            {/* Top Right Floating Badge: Learning Progress */}
-            <div className="absolute top-12 -right-4 sm:-right-10 bg-white text-slate-800 px-4 py-3 rounded-2xl shadow-xl border border-slate-100 animate-float-reverse hidden sm:block min-w-[140px]">
-              <p className="text-[10px] text-slate-500 font-semibold uppercase">Learning Progress</p>
-              <p className="text-xl font-black text-slate-900 mt-0.5">55%</p>
-              <div className="w-full bg-slate-100 rounded-full h-1.5 mt-1.5 overflow-hidden">
-                <div className="bg-[#0052FF] h-full rounded-full w-[55%]"></div>
+            {/* Badge 2 (Right): Learning Progress 55% */}
+            <div className="absolute top-28 -right-6 sm:-right-16 bg-white text-slate-900 p-4 rounded-2xl shadow-2xl border border-slate-100 z-30 min-w-[170px]">
+              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Learning Progress</p>
+              <p className="text-3xl font-black text-slate-900 mt-0.5">55%</p>
+              <div className="w-full bg-slate-100 rounded-full h-2 mt-2 overflow-hidden">
+                <div className="bg-[#C6FF00] h-full rounded-full w-[55%]"></div>
               </div>
             </div>
 
-            {/* Bottom Left Floating Badge: Happy Students */}
-            <div className="absolute bottom-6 -left-6 sm:-left-12 bg-white text-slate-800 p-3 rounded-2xl shadow-xl border border-slate-100 animate-float-reverse flex items-center space-x-3">
-              <div>
-                <p className="text-xs font-bold text-slate-900 flex items-center space-x-1">
-                  <span>Happy Students</span>
-                </p>
-                <div className="flex items-center space-x-1 text-amber-500 text-xs font-bold mt-0.5">
-                  <Star className="w-3.5 h-3.5 fill-amber-400" />
-                  <span>4.8</span>
-                </div>
-                <div className="flex items-center space-x-[-6px] mt-1.5">
-                  <img className="w-5 h-5 rounded-full border border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="user" />
-                  <img className="w-5 h-5 rounded-full border border-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="user" />
-                  <img className="w-5 h-5 rounded-full border border-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="user" />
-                  <span className="w-5 h-5 rounded-full bg-[#C6FF00] text-slate-900 font-bold text-[9px] flex items-center justify-center border border-white">2k+</span>
-                </div>
+            {/* Badge 3 (Bottom-Left): Happy Students */}
+            <div className="absolute bottom-16 -left-8 sm:-left-20 bg-white text-slate-900 p-4 rounded-2xl shadow-2xl border border-slate-100 z-30 min-w-[180px]">
+              <p className="text-xs font-bold text-slate-900">Happy Students</p>
+              <div className="flex items-center space-x-1 text-[11px] font-bold text-slate-700 mt-0.5">
+                <span>4.5 (240)</span>
+                <Star className="w-3.5 h-3.5 fill-[#C6FF00] text-[#C6FF00]" />
+              </div>
+              <div className="flex items-center space-x-[-6px] mt-2.5">
+                <img className="w-6 h-6 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="user" />
+                <img className="w-6 h-6 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="user" />
+                <img className="w-6 h-6 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="user" />
+                <img className="w-6 h-6 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" alt="user" />
+                <span className="w-6 h-6 rounded-full bg-[#C6FF00] text-slate-900 font-extrabold text-[9px] flex items-center justify-center border-2 border-white">2K+</span>
               </div>
             </div>
 
           </div>
+
         </div>
 
       </div>
+
     </section>
   );
 }
