@@ -4,79 +4,98 @@ const testimonials = [
   {
     id: 1,
     name: "Sarah M.",
-    role: "UI/UX Student",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200",
-    quote: "ByteSpace completely transformed my learning journey. The course editor and practical projects allowed me to build a professional portfolio in just weeks.",
+    role: "Enthusiastic Learner",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300",
+    quote: `"ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning."`,
   },
   {
     id: 2,
     name: "James L.",
-    role: "Full-Stack Creator",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
-    quote: "As a creator, publishing my courses on ByteSpace has allowed me to reach over 5,000 students globally and build a steady revenue stream.",
+    role: "Lifelong Learner",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300",
+    quote: `"I've tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development."`,
   },
   {
     id: 3,
     name: "Alex B.",
-    role: "Data Science Student",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
-    quote: "The interactive exercises and vibrant community forums kept me motivated throughout my career transition into data science.",
+    role: "Inspired Creator",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300",
+    quote: `"As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It's fulfilling to see my courses making a positive impact on learners globally."`,
   },
 ];
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-amber-50/50 via-lime-50/30 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 relative overflow-hidden bg-[#FAFCFF] font-sans">
+      
+      {/* Background Gradient Mesh matching Figma screenshot */}
+      {/* Top Right Lime-Yellow Radial Glow */}
+      <div 
+        className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none opacity-80"
+        style={{
+          background: "radial-gradient(circle at 85% 15%, rgba(215, 255, 80, 0.45) 0%, rgba(215, 255, 80, 0.1) 45%, transparent 70%)",
+          filter: "blur(40px)"
+        }}
+      />
+
+      {/* Bottom Left Soft Blue/Lavender Radial Glow */}
+      <div 
+        className="absolute bottom-0 left-0 w-[500px] h-[500px] pointer-events-none opacity-70"
+        style={{
+          background: "radial-gradient(circle at 15% 85%, rgba(200, 218, 255, 0.5) 0%, rgba(200, 218, 255, 0.1) 45%, transparent 70%)",
+          filter: "blur(40px)"
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
         
-        {/* Header Grid: Title Left, Description Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-14">
+        {/* Header Row: Title Left, Paragraph Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div className="lg:col-span-5">
-            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
               Discover What Our <br className="hidden sm:inline" /> Community Is Saying
             </h2>
           </div>
           <div className="lg:col-span-7">
-            <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal pt-1">
               At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform. Explore testimonials that reflect the diverse perspectives of enthusiastic learners and accomplished creators.
             </p>
           </div>
         </div>
 
-        {/* 3 Testimonials Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* 3 Testimonials Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {testimonials.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6 group hover:-translate-y-1"
+              className="bg-white rounded-[28px] p-8 shadow-sm border border-slate-100/80 hover:shadow-xl transition-all duration-300 flex flex-col space-y-3"
             >
-              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed italic">
-                "{item.quote}"
-              </p>
-
-              <div className="flex items-center space-x-3 pt-4 border-t border-slate-100">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden border border-slate-200 flex-shrink-0">
-                  <Image
-                    src={item.avatar}
-                    alt={item.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-slate-900 group-hover:text-[#0052FF] transition-colors">
-                    {item.name}
-                  </h4>
-                  <p className="text-[11px] font-semibold text-slate-400">
-                    {item.role}
-                  </p>
-                </div>
+              {/* Avatar */}
+              <div className="relative w-14 h-14 rounded-full overflow-hidden border border-slate-100 shadow-inner mb-2">
+                <Image
+                  src={item.avatar}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
+
+              {/* Name & Role */}
+              <div>
+                <h4 className="text-base font-bold text-slate-900">{item.name}</h4>
+                <p className="text-xs font-semibold text-[#0052FF]">{item.role}</p>
+              </div>
+
+              {/* Quote */}
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal pt-2">
+                {item.quote}
+              </p>
             </div>
           ))}
         </div>
 
       </div>
+
     </section>
   );
 }
