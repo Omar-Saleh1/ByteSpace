@@ -225,14 +225,14 @@ export default function CoursesPage() {
       <Navbar />
 
       {/* Header Banner: Find Your Next Course */}
-      <section className="bg-[#0052FF] text-white py-16 relative overflow-hidden">
+      <section className="bg-[#0052FF] text-white pt-28 pb-16 relative overflow-hidden font-sans">
         
-        {/* Grid Pattern Overlay */}
+        {/* White Square Grid Pattern Overlay */}
         <div 
-          className="absolute inset-0 pointer-events-none opacity-20"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px)`,
-            backgroundSize: '24px 24px'
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px'
           }}
         />
 

@@ -19,7 +19,7 @@ export default function CourseDetailPage() {
       <Navbar />
 
       {/* Top Blue Hero Banner */}
-      <section className="bg-[#0052FF] text-white py-12 relative overflow-hidden">
+      <section className="bg-[#0052FF] text-white pt-28 pb-12 relative overflow-hidden font-sans">
         
         {/* Grid Lines Overlay */}
         <div 

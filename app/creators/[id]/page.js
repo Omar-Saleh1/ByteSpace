@@ -102,7 +102,7 @@ export default function CreatorProfilePage() {
       <Navbar />
 
       {/* Hero Creator Header Banner */}
-      <section className="bg-[#0052FF] text-white py-12 md:py-16 relative overflow-hidden">
+      <section className="bg-[#0052FF] text-white pt-28 pb-12 md:pb-16 relative overflow-hidden">
         
         {/* Grid Lines Overlay */}
         <div 
