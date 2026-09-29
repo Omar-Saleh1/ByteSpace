@@ -9,7 +9,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#0052FF] text-white border-b border-blue-600/30 sticky top-0 z-50 backdrop-blur-md bg-opacity-95">
+    <header className="bg-[#0052FF] text-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           

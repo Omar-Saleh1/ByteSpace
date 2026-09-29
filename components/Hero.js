@@ -80,7 +80,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* 2. Middle-Right Wireframe Box + White 3D Cone/Pyramid + Cursor "Anonymous" */}
+      {/* 2. Middle-Right Wireframe Box + White 3D Cone/Pyramid */}
       <div className="absolute top-64 right-16 w-52 h-52 border border-white/20 rounded-none pointer-events-none hidden lg:block z-10">
         {/* White 3D Pyramid inside */}
         <div className="absolute inset-0 flex items-center justify-center">
@@ -89,21 +89,9 @@ export default function Hero() {
             <polygon points="65,10 120,125 65,125" fill="#e2e8f0" />
           </svg>
         </div>
-
-        {/* Cursor + "Anonymous" Badge */}
-        <div className="absolute -top-6 -left-12 flex items-center space-x-1.5 z-20 pointer-events-none">
-          {/* White Cursor Arrow */}
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M4 4L11 20L14 13L21 10L4 4Z" fill="white" stroke="#1E293B" strokeWidth="1.5" strokeLinejoin="round"/>
-          </svg>
-          {/* Dark Glass Badge */}
-          <span className="bg-slate-900/80 backdrop-blur-md text-white font-bold text-xs px-3.5 py-1.5 rounded-xl border border-slate-700/60 shadow-xl">
-            Anonymous
-          </span>
-        </div>
       </div>
 
-      {/* 3. Bottom-Right Wireframe Box + White 3D Spring + Cursor "Aminul Islam" */}
+      {/* 3. Bottom-Right Wireframe Box + White 3D Spring */}
       <div className="absolute bottom-4 right-8 w-64 h-64 border border-white/20 rounded-none pointer-events-none hidden md:block z-10">
         {/* White 3D Spring inside */}
         <div className="absolute inset-0 flex items-center justify-center">
@@ -117,18 +105,6 @@ export default function Hero() {
               filter="drop-shadow(0px 12px 18px rgba(0,0,0,0.2))"
             />
           </svg>
-        </div>
-
-        {/* Purple Cursor + "Aminul Islam" Badge */}
-        <div className="absolute -bottom-4 -left-12 flex items-center space-x-1.5 z-20 pointer-events-none">
-          {/* Purple Cursor Arrow */}
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M4 4L11 20L14 13L21 10L4 4Z" fill="#A855F7" stroke="white" strokeWidth="1.5" strokeLinejoin="round"/>
-          </svg>
-          {/* Purple Badge */}
-          <span className="bg-[#9333EA] text-white font-black text-xs px-3.5 py-1.5 rounded-xl shadow-2xl border border-purple-400/40">
-            Aminul Islam
-          </span>
         </div>
       </div>
 
