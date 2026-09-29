@@ -31,19 +31,19 @@ export default function TestimonialsSection() {
       {/* Background Gradient Mesh matching Figma screenshot */}
       {/* Top Right Lime-Yellow Radial Glow */}
       <div 
-        className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none opacity-80"
+        className="absolute top-0 right-0 w-[700px] h-[700px] pointer-events-none"
         style={{
-          background: "radial-gradient(circle at 85% 15%, rgba(215, 255, 80, 0.45) 0%, rgba(215, 255, 80, 0.1) 45%, transparent 70%)",
+          background: "radial-gradient(circle at 85% 15%, rgba(215, 255, 60, 0.55) 0%, rgba(215, 255, 60, 0.2) 45%, transparent 70%)",
           filter: "blur(40px)"
         }}
       />
 
-      {/* Bottom Left Soft Blue/Lavender Radial Glow */}
+      {/* Bottom Left Vibrant Purple / Lavender Radial Glow */}
       <div 
-        className="absolute bottom-0 left-0 w-[500px] h-[500px] pointer-events-none opacity-70"
+        className="absolute -bottom-20 -left-20 w-[650px] h-[650px] pointer-events-none"
         style={{
-          background: "radial-gradient(circle at 15% 85%, rgba(200, 218, 255, 0.5) 0%, rgba(200, 218, 255, 0.1) 45%, transparent 70%)",
-          filter: "blur(40px)"
+          background: "radial-gradient(circle at 20% 80%, rgba(165, 175, 255, 0.85) 0%, rgba(185, 195, 255, 0.45) 40%, transparent 70%)",
+          filter: "blur(35px)"
         }}
       />
 
